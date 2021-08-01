@@ -19,10 +19,10 @@ app.engine('hbs', handlebars({
   extname: '.hbs'
 }))
 app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, 'resources', 'views'))
-//
+app.set('views', path.join(__dirname, 'src', 'resources', 'views'))
+//,
 
-app.listen(port, function(){
+app.listen(port, function () {
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
