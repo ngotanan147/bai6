@@ -1,10 +1,12 @@
+
 {
   "name": "1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect src\\index.js",
+    
+    "start": "node src\\index.js",
     "watch": "node-sass --watch src\\resources\\scss --output src\\public\\css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
