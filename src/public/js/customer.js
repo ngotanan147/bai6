@@ -1,4 +1,4 @@
-console.log('hello')
+const URL = 'https://project1-ngotanan.herokuapp.com'
 $('.form-create').submit(function (e) {
     e.preventDefault();
     console.log('submit')
@@ -8,7 +8,7 @@ $('.form-create').submit(function (e) {
     }
     $.ajax({
         type: "POST",
-        url: `http://localhost:3000/create`,
+        url: `${URL}/create`,
         contentType: 'application/json',
         data: JSON.stringify(formData),
         encode: true,
@@ -57,7 +57,7 @@ function deletee() {
             console.log(id)
             $.ajax({
                 type: "DELETE",
-                url: `http://localhost:3000/delete/${id}`,
+                url: `${URL}/delete/${id}`,
                 contentType: 'application/json',
                 encode: true,
             }).done(function (res) {
@@ -79,7 +79,7 @@ function edit() {
             }
             $.ajax({
                 type: "PUT",
-                url: `http://localhost:3000/edit/${id}`,
+                url: `${URL}/edit/${id}`,
                 data: JSON.stringify(formData),
                 contentType: 'application/json',
                 encode: true,
