@@ -10,7 +10,7 @@ const app = express()
 route(app)
 
 //Static config
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'src', 'public')))
 
 //
 
@@ -26,4 +26,4 @@ app.listen(port, function () {
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
-// "start": "nodemon --inspect src\\index.js",
+// "start": "nodemon --inspect app.js",

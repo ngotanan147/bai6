@@ -1,4 +1,4 @@
-
+console.log('hello')
 $('.form-create').submit(function (e) {
     e.preventDefault();
     console.log('submit')
