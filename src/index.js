@@ -5,7 +5,7 @@ const handlebars = require('express-handlebars')
 const db = require('./config/db')
 db.connect(process.env.STR_CONNECT)
 const route = require('./routes/index.js')
-
+const port = process.env.PORT || 3000
 const app = express()
 route(app)
 
@@ -22,7 +22,7 @@ app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'resources', 'views'))
 //
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(port, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
