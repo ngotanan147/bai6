@@ -2,9 +2,9 @@ require('dotenv').config();
 const express = require('express')
 const path = require('path')
 const handlebars = require('express-handlebars')
-const db = require('./config/db')
+const db = require('./src/config/db')
 db.connect(process.env.STR_CONNECT)
-const route = require('./routes/index.js')
+const route = require('./src/routes/index.js')
 const port = process.env.PORT || 3000
 const app = express()
 route(app)
