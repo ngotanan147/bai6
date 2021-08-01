@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const customerController = require('../app/Controllers/CustomerController.js')
+const customerController = require('../app/controllers/CustomerController.js')
 
 router.get('/', customerController.index)
 router.post('/create', customerController.create)
