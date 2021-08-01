@@ -52,6 +52,28 @@ class CustomerController {
             console.log(e)
         }
     }
+
+    async search(req, res, next) {
+        try {
+            const { query } = req.params
+            const customer = await Customer.find({ "name": { $regex: ".*" + query + ".*" } })
+
+            res.send({ status: true, data: customer })
+        } catch (e) {
+            console.log(e)
+        }
+
+    }
+
+    async getAll(req, res, next) {
+        try {
+            const customer = await Customer.find({})
+            res.send({ status: true, data: customer })
+        } catch (e) {
+            console.log(e)
+        }
+
+    }
 }
 
 module.exports = new CustomerController();

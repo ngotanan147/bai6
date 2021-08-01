@@ -1,7 +1,11 @@
-<div class="text-center">
-    <button class='btn btn-primary pl-3 pr-3 mt-2 mb-2' data-bs-toggle="modal"
-        data-bs-target="#exampleModal">Add</button>
+<div class="text-center d-flex pt-3 pb-3 d-flex justify-content-evenly">
+    <div>
+        <button class='btn btn-primary ' data-bs-toggle="modal" data-bs-target="#exampleModal">Add new customer</button>
+    </div>
 
+    <form class="d-flex">
+        <input class="form-control me-2" id="search-input" type="search" placeholder="Search" aria-label="Search">
+    </form>
 </div>
 <table class="table table-dark">
     <thead>
@@ -25,6 +29,9 @@
         {{/each}}
     </tbody>
 </table>
+<div class='text-center title d-none'>
+    <h2>Not found!</h2>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
